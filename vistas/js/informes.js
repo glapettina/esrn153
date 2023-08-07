@@ -11,6 +11,9 @@ $(".tablas").on("click", ".btnEditarInformeCientifica", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 	
 
 	var datos = new FormData();
@@ -56,6 +59,8 @@ $(".tablas").on("click", ".btnEditarInformeSociales", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -101,6 +106,8 @@ $(".tablas").on("click", ".btnEditarInformeLengua", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -147,6 +154,8 @@ $(".tablas").on("click", ".btnEditarInformeMatematica", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -193,6 +202,8 @@ $(".tablas").on("click", ".btnEditarInformeIngles", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -239,6 +250,8 @@ $(".tablas").on("click", ".btnEditarInformeFisica", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -286,6 +299,8 @@ $(".tablas").on("click", ".btnEditarInformeArtistica", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -332,6 +347,8 @@ $(".tablas").on("click", ".btnEditarInformeFotografia", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -379,6 +396,8 @@ $(".tablas").on("click", ".btnEditarInformeRealizacion", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -426,6 +445,8 @@ $(".tablas").on("click", ".btnEditarInformeGuion", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -473,6 +494,8 @@ $(".tablas").on("click", ".btnEditarInformeSonido", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -520,6 +543,8 @@ $(".tablas").on("click", ".btnEditarInformeTaller", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();
@@ -565,6 +590,8 @@ $(".tablas").on("click", ".btnEditarInformeSemiotica", function(){
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
 
 
 	var datos = new FormData();

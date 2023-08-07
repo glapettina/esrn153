@@ -112,7 +112,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeSociales" periodo="'.$_SESSION['periodo'].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeSociales" nombreAlumno="'.$value["nombre"].'" periodo="'.$_SESSION['periodo'].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -174,7 +174,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
            
-              <h4 class="modal-title">Editar Informe</h4>
+            <h4 class="modal-title" id="alumnoEdicion"></h4>
 
           </div>
 

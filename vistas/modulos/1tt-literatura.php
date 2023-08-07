@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=2 tabla="primero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=1 tabla="primero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="literatura" idCurso=2 tabla="primero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="literatura" idCurso=1 tabla="primero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeLengua" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeLengua" nombreAlumno="'.$value["nombre"].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -119,9 +119,9 @@
                             }
 
 
-                            echo '<div class="btn-group">
+                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="primero" area="literatura" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" tabla="primero" area="literatura" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -173,7 +173,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
            
-              <h4 class="modal-title">Editar Informe</h4>
+            <h4 class="modal-title" id="alumnoEdicion"></h4>
 
           </div>
 
