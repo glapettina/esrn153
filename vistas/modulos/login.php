@@ -7,7 +7,7 @@
 
    <!-- <h2>ESRN Nº 153</h2> -->
 
-   <img src="vistas/img/plantilla/logo.jpg" class="img-responsive" style="padding:60px 100px 0px 100px">
+   <img src="vistas/img/plantilla/logo.png" class="img-responsive" style="padding:60px 100px 0px 100px">
  
   </div>
 
