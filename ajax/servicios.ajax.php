@@ -40,7 +40,7 @@
 			$item1 = "estado";
 			$valor1 = $this->activarServicio;
 
-			$item2 = "id";
+			$item2 = "id_servicio";
 			$valor2 = $this->activarId;
 
 

@@ -56,7 +56,7 @@ $(".tablas").on("click", ".btnEditarServicio", function(){
 
 
 /*=============================================
-ACTIVAR NETBOOK            
+				ACTIVAR NETBOOK            
 =============================================*/
 
 $(document).on("click", ".btnActivarServicio", function(){
@@ -106,12 +106,16 @@ $(document).on("click", ".btnActivarServicio", function(){
 		$(this).html('Pendiente');
 		$(this).attr('estadoServicio', 1);
 
+		
+
 	}else{
 
 		$(this).addClass('btn-success');
 		$(this).removeClass('btn-danger');
 		$(this).html('Resuelto');
 		$(this).attr('estadoServicio', 0);
+
+		
 	}
 })
 
