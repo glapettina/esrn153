@@ -13,6 +13,7 @@
 	require_once "controladores/libros.controlador.php";
 	require_once "controladores/articulos.controlador.php";
 	require_once "controladores/licencias.controlador.php";
+	require_once "controladores/periodos.controlador.php";
 
 	require_once "modelos/usuarios.modelo.php";
 	require_once "modelos/cursos.modelo.php";
@@ -26,6 +27,7 @@
 	require_once "modelos/libros.modelo.php";
 	require_once "modelos/articulos.modelo.php";
 	require_once "modelos/licencias.modelo.php";
+	require_once "modelos/periodos.modelo.php";
 
 
 	$plantilla = new ControladorPlantilla();
