@@ -33,14 +33,7 @@
           <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarAlumno">
             
             Agregar Alumno
-          </button>
-
-          <?php
-
-          echo '<form action="vistas/modulos/impresion_informecb_pdf.php?idCurso=1&tabla=primero" method="post" target="print_popup"><button class="btn btn-primary detalle"><i class="fa fa-print"></i></button></form>';
-
-
-          ?>
+          </button>          
           
         </div>
 

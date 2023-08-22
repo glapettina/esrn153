@@ -1,3 +1,14 @@
+<?php
+
+    $item = null;
+    $valor = null;  
+    $ingreso = 1; 
+
+    $periodos = ControladorPeriodos::ctrMostrarPeriodos($item, $valor, $ingreso);
+
+
+?>  
+
 <div id="back"></div>
 
 <div class="login-box">
@@ -29,7 +40,7 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
 
-      <div class="form-group">
+<!--       <div class="form-group">
            <label>Período</label>
            <select class="form-control" id="periodo" name="periodo" required>
               <option value="">-- Seleccione --</option>              
@@ -37,7 +48,36 @@
               <option value="02/2022">02/2022</option>
               <option value="01/2023">01/2023</option>
            </select>
-      </div>     
+      </div> -->
+      
+      <div class="form-group has-feedback">
+                
+                
+                  
+                  
+                  
+                  <select class="form-control" name="periodo" required>
+
+                    <option value="">Seleccionar Período</option>
+
+                    <?php
+
+                      foreach ($periodos as $key => $value) {
+
+                        echo '<option value="'.$value["nombre"].'">'.$value["nombre"].'</option>';
+                        
+                      }
+
+                    ?>
+                                        
+
+
+                  </select>
+
+               
+
+              </div>
+
 
       <div class="row">
         

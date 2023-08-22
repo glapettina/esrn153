@@ -117,6 +117,7 @@
           $_GET["ruta"] == "resumen-docente" ||
           $_GET["ruta"] == "netbooks" ||
           $_GET["ruta"] == "servicios" ||
+          $_GET["ruta"] == "periodos" ||
           $_GET["ruta"] == "historial-servicios" ||
           $_GET["ruta"] == "primero" ||
           $_GET["ruta"] == "segundo" ||
@@ -271,6 +272,7 @@
 <script src="vistas/js/libros.js"></script>
 <script src="vistas/js/articulos.js"></script>
 <script src="vistas/js/licencias.js"></script>
+<script src="vistas/js/periodos.js"></script>
 
 
 

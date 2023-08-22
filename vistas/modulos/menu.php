@@ -505,6 +505,23 @@
 
 		?>
 
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador") {
+
+      echo '<li>
+        <a href="periodos">
+
+          <i class="fa fa-calendar-check-o"></i>
+          <span>Períodos</span>
+
+        </a>
+      </li>';
+
+    }
+
+    ?>
+
 		<?php
 
 			if ($_SESSION["movilidad"] == "1") {
