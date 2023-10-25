@@ -511,6 +511,43 @@
 
 		}
 
+		/*=============================================
+		EDITAR SEGUIMIENTO CIENTIFICA            
+		=============================================*/
+
+		static public function mdlEditarSeguimientoCientifica($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET criterio_acreditacion_cientifica = :criterio_acreditacion_cientifica, 
+												criterio_evaluacion_cientifica = :criterio_evaluacion_cientifica, 
+												indicador_evaluacion_cientifica = :indicador_evaluacion_cientifica, 
+												apreciacion_cualitativa_cientifica = :apreciacion_cualitativa_cientifica,
+												asistencia_cientifica = :asistencia_cientifica, 
+												observaciones_cientifica = :observaciones_cientifica,
+												id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":criterio_acreditacion_cientifica", $datos["criterio_acreditacion_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":criterio_evaluacion_cientifica", $datos["criterio_evaluacion_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":indicador_evaluacion_cientifica", $datos["indicador_evaluacion_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":apreciacion_cualitativa_cientifica", $datos["apreciacion_cualitativa_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_cientifica", $datos["asistencia_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":observaciones_cientifica", $datos["observaciones_cientifica"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
 
 		/*=============================================
 		EDITAR INFORME SOCIALES            

@@ -225,6 +225,8 @@
           $_GET["ruta"] == "licencias" ||
           $_GET["ruta"] == "licencias-docente" ||
           $_GET["ruta"] == "copia" ||
+          $_GET["ruta"] == "seguimiento" ||
+          $_GET["ruta"] == "2tm-seguimiento-cientifica" ||
           $_GET["ruta"] == "salir") {
         
           include "modulos/".$_GET["ruta"].".php";

@@ -157,7 +157,7 @@
 
 
   <!--=====================================
-  MODAL AGREGAR LIBRO
+            MODAL AGREGAR LIBRO
   ======================================-->
 
 
@@ -182,7 +182,7 @@
           </div>
 
           <!--=====================================
-          CUERPO DEL MODAL
+                      CUERPO DEL MODAL
           ======================================-->
 
 
@@ -238,8 +238,6 @@
                       }
 
                     ?>
-                                        
-
 
                   </select>
 
@@ -304,7 +302,7 @@
           </div>
 
           <!--=====================================
-          PIE DEL MODAL
+                        PIE DEL MODAL
           ======================================-->
 
 
@@ -403,9 +401,20 @@
                   
                        <span class="input-group-addon"><i class="fa fa-th"></i></span>
                   
-                       <select class="form-control input-lg" name="editarGenero" readonly required>
+                       <select class="form-control input-lg" name="editarGenero" required>
                     
-                           <option id="editarGenero"></option>                    
+                        
+
+                          <?php
+
+                            foreach ($generos as $key => $value) {
+
+                              echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                              
+                            }
+
+                          ?>
+
                     
                        </select>
 
@@ -470,7 +479,7 @@
           </div>
 
           <!--=====================================
-          PIE DEL MODAL
+                        PIE DEL MODAL
           ======================================-->
 
 

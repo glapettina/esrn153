@@ -601,6 +601,53 @@
 
 
 		/*=============================================
+		EDITAR SEGUIMIENTO CIENTIFICA
+		=============================================*/
+
+		static public function ctrEditarSeguimientoCientifica($tabla,$curso){
+
+			if (isset($_POST["acreditacionCientifica"])) {
+								
+
+					$datos = array("criterio_acreditacion_cientifica" => $_POST["acreditacionCientifica"], 
+					"criterio_evaluacion_cientifica" => $_POST["evaluacionCientifica"], 
+					"indicador_evaluacion_cientifica" => $_POST["indicadorCientifica"], 
+					"apreciacion_cualitativa_cientifica" => $_POST["apreciaCientifica"], 
+					"asistencia_cientifica" => $_POST["asistenciaCientifica"],
+					"observaciones_cientifica" => $_POST["observaCientifica"],
+					"id_usuario" => $_SESSION["id"], 
+					"id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarSeguimientoCientifica($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+
+		/*=============================================
 		EDITAR INFORME SOCIALES
 		=============================================*/
 
