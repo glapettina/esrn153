@@ -1,5 +1,5 @@
 /*=============================================
-EDITAR LIBRO
+				EDITAR LIBRO
 =============================================*/
 
 
@@ -43,10 +43,13 @@ $(".tablas").on("click", ".btnEditarLibro", function(){
 					$("#idLibro").val(respuesta["id"]);
 					$("#editarCodigo").val(respuesta["codigo"]);
 					$("#editarNombre").val(respuesta["nombre"]);
+					$("#editarGenero").val(respuesta["id_genero"]);
+					$("#editarGenero").html(respuesta["nombre"]);
 					$("#editarAutor").val(respuesta["autor"]);
 					$("#editarEditorial").val(respuesta["editorial"]);
 					$("#editarCantidad").val(respuesta["cantidad"]);
 					$("#editarUbicacion").val(respuesta["ubicacion"]);
+
 					
 
 		}
@@ -57,7 +60,7 @@ $(".tablas").on("click", ".btnEditarLibro", function(){
 
 
 /*=============================================
-ACTIVAR LIBRO            
+				ACTIVAR LIBRO            
 =============================================*/
 
 $(document).on("click", ".btnActivarLibro", function(){

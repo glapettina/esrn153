@@ -6,7 +6,7 @@
 
 
 		/*=============================================
-		CREAR LIBRO            
+						CREAR LIBRO            
 		=============================================*/
 
 		static public function mdlCrearLibro($tabla, $datos){
@@ -20,7 +20,6 @@
 			$stmt->bindParam(":editorial", $datos["editorial"], PDO::PARAM_STR);
 			$stmt->bindParam(":cantidad", $datos["cantidad"], PDO::PARAM_STR);
 			$stmt->bindParam(":ubicacion", $datos["ubicacion"], PDO::PARAM_STR);
-
 
 
 			if ($stmt->execute()) {
@@ -126,7 +125,7 @@
 
 
 		/*=============================================
-	    ACTUALIZAR LIBRO            
+	    				ACTUALIZAR LIBRO            
 		=============================================*/
 
 		static public function mdlActualizarLibro($tabla, $item1, $valor1, $item2, $valor2){

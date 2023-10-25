@@ -49,6 +49,58 @@ $(".tablas").on("click", ".btnEditarInformeCientifica", function(){
 	
 })
 
+
+/*=============================================
+EDITAR SEGUIMIENTO CIENTIFICA
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarSeguimientoCientifica", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+	var nombre = $(this).attr("nombreAlumno");
+
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+	
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#acreditacionCientifica").val(respuesta["criterio_acreditacion_cientifica"]);
+			$("#evaluacionCientifica").val(respuesta["criterio_evaluacion_cientifica"]);
+			$("#indicadorCientifica").val(respuesta["indicador_evaluacion_cientifica"]);
+			$("#apreciaCientifica").val(respuesta["apreciación_cualitativa_cientifica"]);
+			$("#asistenciaCientifica").val(respuesta["asistencia_cientifica"]);
+			$("#observaCientifica").val(respuesta["observaciones_cientifica"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
 /*=============================================
 EDITAR INFORME SOCIALES
 =============================================*/
@@ -671,6 +723,28 @@ $(".btnInformeArea").click(function(){
 	window.open("extensiones/tcpdf/pdf/"+informe+".php?informe="+informe+"&area="+area+"&tabla="+tabla+"&idCurso="+idCurso+"&idCurso2="+idCurso2+"&idCurso3="+idCurso3+"&periodo="+periodo, "_blank");
 
 })
+
+/*=============================================
+IMPRIMIR SEGUIMIENTO X ÁREA
+=============================================*/
+
+$(".btnSeguimientoArea").click(function(){
+
+	//$(".tablas").on("click", ".btnInformeArea", function(){
+	
+	
+		var idCurso = $(this).attr("idCurso");
+		var idCurso2 = $(this).attr("idCurso2");
+		var idCurso3 = $(this).attr("idCurso3");
+		var informe = $(this).attr("informe");
+		var area = $(this).attr("area");
+		var tabla = $(this).attr("tabla");
+		var periodo = $(this).attr("periodo");
+		
+	
+		window.open("extensiones/tcpdf/pdf/"+informe+".php?informe="+informe+"&area="+area+"&tabla="+tabla+"&idCurso="+idCurso+"&idCurso2="+idCurso2+"&idCurso3="+idCurso3+"&periodo="+periodo, "_blank");
+	
+	})
 
 /*=============================================
 IMPRIMIR INFORME CICLO BASICO
