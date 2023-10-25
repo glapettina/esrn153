@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1er. Año TT - Area Lengua y Literatura
+        Informe de Seguimiento Bloque Académico - 2º Año TM - Area Científica y Tecnológica
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1er. Año TT - Area Lengua y Literatura</li>
+        <li class="active">Informe de Seguimiento Bloque Académico - 2º Año TM - Area Científica y Tecnológica</li>
       </ol>
     </section>
 
@@ -35,12 +35,8 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=2 tabla="primero" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalCopiaSaberes">
-                  
-                  Copia Saberes
-                </button>
 
-                <button class="btn btn-primary btnInformeArea" area="literatura" idCurso=2 tabla="primero" periodo="'.$_SESSION['periodo'].'" informe="informe-area">
+                <button class="btn btn-primary btnSeguimientoArea" area="cientifica" idCurso=3 tabla="seguimiento" periodo="'.$_SESSION['periodo'].'" informe="seguimiento-area">
                   
                   Informes Curso
                 </button>
@@ -76,9 +72,9 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 2;
-                  $tabla = "primero";
-                  $periodo = $_SESSION['periodo'];
+                  $valor = 3;
+                  $tabla = "seguimiento";
+                  $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
 
@@ -111,7 +107,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeLengua" nombreAlumno="'.$value["nombre"].'" tabla="primero" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarSeguimientoCientifica" nombreAlumno="'.$value["nombre"].'" tabla="seguimiento" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarSeguimiento"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -119,9 +115,9 @@
                             }
 
 
-                             echo '<div class="btn-group">
+                            echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" tabla="primero" area="literatura" idAlumno="'.$value["id"].'" data-toggle="modal" periodo="'.$_SESSION['periodo'].'" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirSeguimientoIndividual" informe="informe-seguimiento" periodo="'.$_SESSION['periodo'].'" tabla="seguimiento" area="cientifica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -152,11 +148,11 @@
 
 
 <!--=====================================
-  MODAL EDITAR INFORME
+  MODAL EDITAR INFORME SEGUIMIENTO
   ======================================-->
 
 
-<div id="modalEditarInforme" class="modal fade" role="dialog">
+<div id="modalEditarSeguimiento" class="modal fade" role="dialog">
 
   <div class="modal-dialog">
 
@@ -185,14 +181,32 @@
 
             <div class="box-body">
 
-              <!-- ENTRADA PARA LOS SABERES -->          
+              <!-- ENTRADA PARA EL CRITERIO DE ACREDITACIÓN  -->          
               
               <div class="form-group">
                 
-                  <label for="saberesLengua">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="saberesLengua" name="saberesLengua">
+                  <label for="acreditacionCientifica">Criterio de Acreditación</label>
+                      <textarea class="form-control" cols="80" rows="4" id="acreditacionCientifica" name="acreditacionCientifica">
                   </textarea>
               </div>
+
+                <!-- ENTRADA PARA EL CRITERIO DE EVALUACIÓN  -->          
+  
+                <div class="form-group">
+                
+                <label for="evaluacionCientifica">Criterio de Evaluación</label>
+                    <textarea class="form-control" cols="80" rows="4" id="evaluacionCientifica" name="evaluacionCientifica">
+                </textarea>
+            </div>
+
+                <!-- ENTRADA PARA EL INDICADOR DE EVALUACIÓN  -->          
+
+                <div class="form-group">
+                
+                <label for="indicadorCientifica">Indicador de Evaluación</label>
+                    <textarea class="form-control" cols="80" rows="4" id="indicadorCientifica" name="indicadorCientifica">
+                </textarea>
+            </div>
 
         <!-- ENTRADA PARA LA APRECIACION --> 
 
@@ -203,12 +217,11 @@
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
                   
-                  <select class="form-control input-lg" id="apreciaLengua" name="apreciaLengua">
+                  <select class="form-control input-lg" id="apreciaCientifica" name="apreciaCientifica">
 
                   <option value="">Apreciación Cualitativa</option>
-                  <option value="Se Apropió de los Saberes">Se Apropió de los Saberes</option>
-                  <option value="En Proceso de Apropiación de Saberes">En Proceso de Apropiación de Saberes</option>
-                  <option value="No se Apropió de los Saberes">No se Apropió de los Saberes</option>
+                  <option value="Saberes Apropiados">Saberes Apropiados</option>
+                  <option value="Saberes No Apropiados">Saberes No Apropiados</option>
                                         
 
                   </select>
@@ -226,7 +239,7 @@
                   
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <select class="form-control input-lg" id="asistenciaLengua" name="asistenciaLengua">
+                  <select class="form-control input-lg" id="asistenciaCientifica" name="asistenciaCientifica">
 
                   <option value="">Asistencia</option>
                   <option value="0 %">0 %</option>
@@ -244,8 +257,8 @@
 
 
               <div class="form-group">          
-                  <label for="observaLengua">Observaciones</label>
-                      <textarea class="form-control" cols="80" rows="3" id="observaLengua" name="observaLengua">
+                  <label for="observaCientifica">Comentarios y Sugerencias para la Continuidad de la Trayectoria</label>
+                      <textarea class="form-control" cols="80" rows="4" id="observaCientifica" name="observaCientifica">
                   </textarea>
               </div>
 
@@ -264,14 +277,6 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-           <!--  <?php
-
-              $idCurso = 1;
-
-            echo'<button type="button" curso="'.$idCurso.'" tabla="primero" class="btn btn-danger pull-center" id="btnCopia">Copiar Saberes</button>';
-
-            ?>  -->
-
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -280,11 +285,11 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "1tt-literatura";
+              $tabla = "seguimiento";
+              $curso = "2tm-seguimiento-cientifica";
 
               $editarInforme = new ControladorInformes();
-              $editarInforme -> ctrEditarInformeLengua($tabla, $curso);
+              $editarInforme -> ctrEditarSeguimientoCientifica($tabla, $curso);
 
           ?>
 
@@ -335,8 +340,8 @@
               
               <div class="form-group">
                 
-                  <label for="copiaSaberesLengua">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesLengua" name="copiaSaberesLengua">
+                  <label for="copiaSaberesCientifica">Saberes</label>
+                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesCientifica" name="copiaSaberesCientifica">
                   </textarea>
               </div>
 
@@ -364,13 +369,13 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "1tt-literatura";
-              $ncurso = 2;
-              $periodo = $_SESSION['periodo'];
+              $tabla = "segundo";
+              $curso = "2tm-cientifica";
+              $ncurso = 3;
+              $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
-              $copiaSaberes -> ctrCopiarSaberesLengua($tabla, $curso, $ncurso, $periodo);
+              $copiaSaberes -> ctrCopiarSaberesCientifica($tabla, $curso, $ncurso, $periodo);
 
           ?>
 

@@ -454,6 +454,237 @@
 </li>
 </li>
 
+
+<li class="treeview">
+            
+            <a href="#">
+                <i class="fa fa-file-text" aria-hidden="true"></i> <span>Informes de Seguimiento</span>
+                <!-- <span class="pull-right-container badge bg-blue"> -->
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              
+            </a>
+            
+            <?php
+
+              if ($_SESSION["perfil"] == "Administrador") {
+
+                echo '<li>
+                  <a href="seguimiento">
+
+                    <i class="fa fa-user-circle"></i>
+                    <span>Alumnos</span>
+
+                  </a>
+                </li>';
+
+              }
+
+              ?>
+           
+           <?php
+             
+              if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Preceptor") {
+
+
+         echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Emisión de Informes</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+              <ul class="treeview-menu">
+                  <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año</a></li>
+              </ul>           
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Científica") {
+       
+
+   echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Científica y Tecnológica</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">                
+              <li><a href="2tm-seguimiento-cientifica"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+          </ul>
+
+       
+        </li>';
+
+         }
+
+    ?>
+
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Sociales") {
+
+        echo '<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Sociales y Humanidades</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+          </ul>
+
+       
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Lengua y Literatura") {
+
+
+
+        echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Lengua y Literatura</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+         
+          </ul>
+
+       
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Matemática") {
+
+
+        echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Matemática</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+         
+          </ul>
+
+       
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Segundas Lenguas") {
+
+        echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Segundas Lenguas</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+         
+          </ul>
+
+       
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Física") {
+
+
+        echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Educación Física</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+         
+          </ul>
+
+       
+        </li>';
+
+        }
+
+    ?>
+
+    <?php
+
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Educación Artística") {
+
+
+        echo'<li class="treeview">
+            <a href="#">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Lenguajes Artísticos</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+
+           <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TM</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> 2º Año - TT</a></li>
+         
+          </ul>
+
+       
+        </li>';
+
+           }
+
+        ?>
+
+
+</ul>
+</li>
+</li>
+
+
     		<?php
 
 	    		if ($_SESSION["perfil"] == "Administrador") {

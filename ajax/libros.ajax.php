@@ -34,6 +34,7 @@
 
 		public function ajaxActivarLibro(){
 
+			$tabla = "libros";
 
 			$item1 = "estado";
 			$valor1 = $this->activarLibro;
@@ -42,7 +43,7 @@
 			$valor2 = $this->activarId;
 
 
-			$respuesta = ModeloLibros::mdlActualizarLibro($item1, $valor1, $item2, $valor2);
+			$respuesta = ModeloLibros::mdlActualizarLibro($tabla, $item1, $valor1, $item2, $valor2);
 
 		}
 		

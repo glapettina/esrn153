@@ -97,7 +97,7 @@
 					$tabla = "libros";
 					
 
-					$datos = array("codigo" => $_POST["editarCodigo"], "nombre" => $_POST["editarNombre"], "autor" => $_POST["editarAutor"], "editorial" => $_POST["editarEditorial"], "cantidad" => $_POST["editarCantidad"], "ubicacion" => $_POST["editarUbicacion"], "id" => $_POST["idAlumno"]);
+					$datos = array("codigo" => $_POST["editarCodigo"], "nombre" => $_POST["editarNombre"], "autor" => $_POST["editarAutor"], "editorial" => $_POST["editarEditorial"], "cantidad" => $_POST["editarCantidad"], "ubicacion" => $_POST["editarUbicacion"], "id" => $_POST["idLibro"]);
 
 
 					$respuesta = ModeloLibros::mdlEditarLibro($tabla, $datos);
